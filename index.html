@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panza Cero - Alimentación Saludable para tu Perro</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-green': '#4CAF50',
+                        'brand-beige': '#F8F9F5',
+                        'brand-blue': '#3A7CA5',
+                        'brand-yellow': '#F4C542',
+                        'brand-darkgreen': '#203B2A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .cta-btn-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .cta-btn-hover:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.3);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease-in-out, padding 0.35s ease-in-out;
+        }
+        .accordion-content.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-brand-beige">
+
+    <!-- SECCIÓN 1: Logo Centrado -->
+    <header class="bg-brand-green py-6 px-4 text-center flex justify-center items-center shadow-sm">
+        <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-4 border-white shadow-lg flex items-center justify-center bg-white">
+            <img src="https://raw.githubusercontent.com/nelsondanielosorio12345-cloud/Alimentos/main/Logo%20Panza%20Cero%20con%20Perrito%20Alegre.png" 
+                 alt="Logo Panza Cero" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://placehold.co/120x120/4CAF50/FFFFFF?text=Panza+Cero'">
+        </div>
+    </header>
+
+    <!-- SECCIÓN 2: Texto de Bienvenida -->
+    <section class="bg-brand-green text-white py-6 px-6 text-center border-t border-green-400">
+        <div class="max-w-3xl mx-auto">
+            <p class="text-lg md:text-xl font-medium leading-relaxed font-heading">
+                Más bienestar en su plato, más energía para compartir la vida contigo. Descubre alternativas de alimentación saludable para cuidar a tu perro, apoyar el control adecuado de su peso y acompañarlo hacia una vida más activa y feliz.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: Problema / Presentación (2 columnas) -->
+    <section class="bg-brand-beige py-12 md:py-16 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="flex justify-center">
+                <img src="https://raw.githubusercontent.com/nelsondanielosorio12345-cloud/Alimentos/main/Momento%20feliz%20con%20mascota%20y%20ni%C3%B1a.png" 
+                     alt="Momento feliz con mascota y niña" 
+                     class="rounded-2xl shadow-xl w-full max-w-md object-cover transform hover:scale-[1.01] transition duration-300"
+                     onerror="this.src='https://placehold.co/600x400/3A7CA5/FFFFFF?text=Momento+Feliz'">
+            </div>
+            <div class="space-y-4">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 font-heading leading-tight">
+                    ¿Te preocupa el peso de tu perro y no sabes qué alimento elegir?
+                </h2>
+                <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                    Tu perro es parte de tu familia y merece que cuides cada detalle de su alimentación. Elegir un alimento puede resultar complicado cuando no sabes qué ingredientes revisar ni qué opción se adapta mejor a sus necesidades.
+                </p>
+                <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                    Imagina tener alternativas que puedas comparar desde casa, con información clara para tomar una decisión más consciente. En Panza Cero queremos ayudarte a elegir productos de alimentación saludable que acompañen el bienestar de tu mascota. Empieza hoy a descubrir opciones para alimentar su bienestar.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: Puntos de Dolor y Solución -->
+    <section class="bg-brand-blue text-white py-12 md:py-16 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold text-center text-brand-yellow font-heading mb-2">
+                        ¿No tienes tiempo para investigar?
+                    </h3>
+                    <p class="text-left text-blue-50 leading-relaxed">
+                        Sabemos que comparar tantos alimentos puede ser agotador. Por eso, Panza Cero busca facilitar tu elección con información clara sobre las características de sus productos, para que puedas revisar las opciones desde casa y comprar con mayor confianza.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold text-center text-brand-yellow font-heading mb-2">
+                        ¿Crees que alimentar mejor a tu perro cuesta demasiado?
+                    </h3>
+                    <p class="text-left text-blue-50 leading-relaxed">
+                        Cuidar su alimentación también implica elegir de forma inteligente. Compara precios, ingredientes y características nutricionales para encontrar una alternativa que se ajuste a tu presupuesto y a las necesidades de tu compañero.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold text-left md:text-center text-brand-yellow font-heading mb-2">
+                        ¿Te preocupa elegir un alimento que no sea adecuado?
+                    </h3>
+                    <p class="text-left text-blue-50 leading-relaxed">
+                        Cada perro es diferente. Revisa la información del producto y, si tu mascota tiene sobrepeso, consulta con un veterinario para identificar la alimentación y las porciones apropiadas. En Panza Cero queremos ayudarte a tomar decisiones mejor informadas.
+                    </p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <img src="https://raw.githubusercontent.com/nelsondanielosorio12345-cloud/Alimentos/main/Bulldog%20feliz%20disfrutando%20Panza%20Cero.png" 
+                     alt="Bulldog feliz disfrutando Panza Cero" 
+                     class="rounded-2xl shadow-xl w-full max-w-md object-cover border-4 border-white/20"
+                     onerror="this.src='https://placehold.co/600x400/4CAF50/FFFFFF?text=Bulldog+Feliz'">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: Primer Botón CTA -->
+    <section class="bg-brand-blue py-8 px-4 text-center border-t border-blue-400/30">
+        <div class="max-w-md mx-auto">
+            <a href="https://wa.link/vbzkxi" target="_blank" rel="noopener noreferrer" 
+               class="cta-btn-hover inline-block w-full bg-brand-yellow text-brand-darkgreen font-extrabold text-lg md:text-xl py-4 px-8 rounded-full shadow-2xl uppercase tracking-wider">
+                QUIERO CONOCER PANZA CERO
+            </a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: Propuesta del Producto -->
+    <section class="bg-brand-beige py-12 md:py-16 px-4 text-center">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900 font-heading">
+                Descubre la propuesta de hoy por la alimentación saludable de Panza Cero
+            </h2>
+            <p class="text-lg text-gray-600 font-medium">
+                Encuentra opciones para acompañar el bienestar de tu mejor amigo.
+            </p>
+            <div class="pt-6 flex justify-center">
+                <img src="https://raw.githubusercontent.com/nelsondanielosorio12345-cloud/Alimentos/main/Productos%20Panza%20Cero.png" 
+                     alt="Productos Panza Cero" 
+                     class="rounded-2xl shadow-xl max-w-full md:max-w-2xl h-auto object-cover"
+                     onerror="this.src='https://placehold.co/700x400/3A7CA5/FFFFFF?text=Productos+Panza+Cero'">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 7: Oferta Irresistible y Bonos (Crashing Style) -->
+    <section class="bg-brand-beige py-8 px-4">
+        <div class="max-w-3xl mx-auto bg-white rounded-3xl p-6 md:p-10 shadow-2xl border-2 border-brand-green/30 relative overflow-hidden">
+            <!-- Badge de oferta -->
+            <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold uppercase px-4 py-1 rounded-bl-lg shadow">
+                Oferta Limitada
+            </div>
+
+            <div class="space-y-6 text-left">
+                <!-- Producto Principal -->
+                <div class="flex items-start gap-3 border-b border-gray-100 pb-4">
+                    <i class="fa-solid fa-circle-check text-brand-green text-xl mt-1"></i>
+                    <div>
+                        <p class="font-bold text-gray-900 text-lg">Alimento Especializado Panza Cero</p>
+                        <p class="text-gray-600 text-sm">(Fórmula Control de Peso - 3 kg a 10 kg)</p>
+                        <p class="text-xs text-gray-400 line-through">Valor real: $85.000 COP</p>
+                    </div>
+                </div>
+
+                <!-- Bonos -->
+                <div class="space-y-4">
+                    <div class="bg-green-50 p-4 rounded-xl border border-green-200 flex items-start gap-3">
+                        <i class="fa-solid fa-gift text-brand-green text-2xl mt-1"></i>
+                        <div>
+                            <p class="font-bold text-brand-darkgreen">BONO 1 EXCLUSIVO:</p>
+                            <p class="text-sm text-gray-700">Guía Digital Nutricional "Transición Nutricional y Control de Peso Canino" avalada por veterinarios.</p>
+                            <p class="text-xs font-semibold text-brand-green mt-1">(Valor real: $35.000 COP — <span class="uppercase">GRATIS</span>)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 p-4 rounded-xl border border-green-200 flex items-start gap-3">
+                        <i class="fa-solid fa-scale-balanced text-brand-green text-2xl mt-1"></i>
+                        <div>
+                            <p class="font-bold text-brand-darkgreen">BONO 2 EXCLUSIVO:</p>
+                            <p class="text-sm text-gray-700">Medidor de Porción Exacta anti-sobrepeso para servir la cantidad perfecta sin adivinar.</p>
+                            <p class="text-xs font-semibold text-brand-green mt-1">(Valor real: $20.000 COP — <span class="uppercase">GRATIS</span>)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 p-4 rounded-xl border border-green-200 flex items-start gap-3">
+                        <i class="fa-brands fa-whatsapp text-brand-green text-2xl mt-1"></i>
+                        <div>
+                            <p class="font-bold text-brand-darkgreen">BONO 3 EXCLUSIVO:</p>
+                            <p class="text-sm text-gray-700">Acceso a nuestra comunidad privada de WhatsApp con consejos semanales de expertos en nutrición canina.</p>
+                            <p class="text-xs font-semibold text-brand-green mt-1">(Valor real: $40.000 COP — <span class="uppercase">GRATIS</span>)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Precio Final -->
+                <div class="bg-brand-yellow/20 p-6 rounded-2xl border-2 border-brand-yellow text-center space-y-2 mt-6">
+                    <p class="text-sm font-bold uppercase text-gray-600 tracking-wider">Pagas hoy únicamente</p>
+                    <p class="text-4xl md:text-5xl font-black text-brand-darkgreen">$68.000 COP</p>
+                    <p class="text-xs md:text-sm font-bold text-green-700">
+                        (Ahorras un 20% de descuento de lanzamiento + $95.000 COP en bonos exclusivos)
+                    </p>
+                </div>
+
+                <!-- Urgencia y Localización -->
+                <div class="bg-red-50 border border-red-200 text-red-700 p-4 rounded-xl text-center text-sm font-semibold flex items-center justify-center gap-2">
+                    <span class="text-base">🚨</span>
+                    <span>Atención: Oferta válida únicamente para los primeros 30 pedidos de esta semana en Mosquera y alrededores.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 8: Segundo Botón CTA -->
+    <section class="bg-brand-blue py-8 px-4 text-center">
+        <div class="max-w-md mx-auto">
+            <a href="https://wa.link/vbzkxi" target="_blank" rel="noopener noreferrer" 
+               class="cta-btn-hover inline-block w-full bg-brand-yellow text-brand-darkgreen font-extrabold text-lg md:text-xl py-4 px-8 rounded-full shadow-2xl uppercase tracking-wider">
+                QUIERO CONOCER PANZA CERO
+            </a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 9: Prueba Social Intro -->
+    <section class="bg-brand-green text-white py-10 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <p class="text-lg md:text-xl font-medium leading-relaxed font-heading">
+                Historias de amor que empiezan con su bienestar. Cada mascota es única y cada familia busca lo mejor para ella. Descubre las experiencias de quienes comparten el compromiso de cuidar a sus compañeros de cuatro patas.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 10: Prueba Social (3 Fotos tipo Instagram) -->
+    <section class="bg-brand-green pb-12 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-2 rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition duration-300">
+                <img src="https://raw.githubusercontent.com/nelsondanielosorio12345-cloud/Alimentos/main/publicacion%20falsa%20instagram.png" 
+                     alt="Testimonio Instagram 1" 
+                     class="w-full h-auto rounded-xl object-cover"
+                     onerror="this.src='https://placehold.co/400x400/F8F9F5/3A7CA5?text=Publicacion+Instagram+1'">
+            </div>
+            <div class="bg-white p-2 rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition duration-300">
+                <img src="https://raw.githubusercontent.com/nelsondanielosorio12345-cloud/Alimentos/main/Publicacion%20falsa%20instagram%202.png" 
+                     alt="Testimonio Instagram 2" 
+                     class="w-full h-auto rounded-xl object-cover"
+                     onerror="this.src='https://placehold.co/400x400/F8F9F5/3A7CA5?text=Publicacion+Instagram+2'">
+            </div>
+            <div class="bg-white p-2 rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition duration-300">
+                <img src="https://raw.githubusercontent.com/nelsondanielosorio12345-cloud/Alimentos/main/Publicacion%20falsa%20instagram%203.png" 
+                     alt="Testimonio Instagram 3" 
+                     class="w-full h-auto rounded-xl object-cover"
+                     onerror="this.src='https://placehold.co/400x400/F8F9F5/3A7CA5?text=Publicacion+Instagram+3'">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 11: Preguntas Frecuentes (Acordeón Interactivo JS) -->
+    <section class="bg-brand-beige py-12 md:py-16 px-4">
+        <div class="max-w-3xl mx-auto space-y-6">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-center text-gray-900 font-heading mb-8">
+                Preguntas Frecuentes
+            </h2>
+
+            <div class="space-y-4">
+                <!-- Elemento 1 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200">
+                    <button class="accordion-header w-full text-left p-5 font-bold text-gray-800 flex justify-between items-center text-base md:text-lg focus:outline-none hover:bg-gray-50 transition">
+                        <span>¿Cómo sé qué alimento es adecuado para mi perro?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-green transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-5 pb-0 text-gray-600">
+                        <p class="py-4 border-t border-gray-100">
+                            Revisa los ingredientes, la información nutricional y las indicaciones del fabricante. Si tu perro tiene sobrepeso, consulta con un veterinario para conocer sus necesidades energéticas y la porción adecuada.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Elemento 2 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200">
+                    <button class="accordion-header w-full text-left p-5 font-bold text-gray-800 flex justify-between items-center text-base md:text-lg focus:outline-none hover:bg-gray-50 transition">
+                        <span>¿Puedo ayudar a mi perro a controlar su peso sin descuidar su alimentación?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-green transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-5 pb-0 text-gray-600">
+                        <p class="py-4 border-t border-gray-100">
+                            El control del peso requiere una alimentación equilibrada, porciones adecuadas y actividad física adaptada a cada perro. La elección del alimento debe considerar su edad, condición corporal y necesidades individuales.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Elemento 3 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200">
+                    <button class="accordion-header w-full text-left p-5 font-bold text-gray-800 flex justify-between items-center text-base md:text-lg focus:outline-none hover:bg-gray-50 transition">
+                        <span>¿Por qué elegir Panza Cero?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-green transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-5 pb-0 text-gray-600">
+                        <p class="py-4 border-t border-gray-100">
+                            Panza Cero se enfoca en ayudar a los dueños de perros con sobrepeso a explorar alternativas de alimentación saludable, comparar productos con información clara y realizar sus compras en línea de manera práctica y confiable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 12: Garantía y Compromiso (2 columnas) -->
+    <section class="bg-brand-blue text-white py-12 md:py-16 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div class="flex justify-center">
+                <img src="https://raw.githubusercontent.com/nelsondanielosorio12345-cloud/Alimentos/main/Garant%C3%ADa%20de%20bienestar%20para%20tu%20mascota.png" 
+                     alt="Garantía de bienestar para tu mascota" 
+                     class="rounded-2xl shadow-xl w-full max-w-md object-cover border-4 border-white/20"
+                     onerror="this.src='https://placehold.co/600x400/4CAF50/FFFFFF?text=Garantia+de+Bienestar'">
+            </div>
+            <div class="space-y-4">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-center font-heading text-brand-yellow">
+                    Tu confianza también es parte de nuestro compromiso
+                </h2>
+                <div class="text-left text-blue-50 space-y-3 leading-relaxed text-base md:text-lg">
+                    <p>
+                        En Panza Cero queremos que compres con tranquilidad y conozcas las características de lo que eliges para tu mascota.
+                    </p>
+                    <p>
+                        Si tu pedido presenta algún inconveniente o el producto no cumple con las condiciones anunciadas, podrás comunicarte con nosotros para revisar tu caso conforme a las políticas de cambios, devoluciones y garantía de la tienda.
+                    </p>
+                    <p>
+                        Nuestro compromiso es ofrecer información clara y acompañarte para que tomes decisiones conscientes sobre el bienestar de tu compañero.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 13: Botón CTA Final -->
+    <section class="bg-brand-blue py-10 px-4 text-center border-t border-blue-400/30">
+        <div class="max-w-md mx-auto space-y-4">
+            <a href="https://wa.link/vbzkxi" target="_blank" rel="noopener noreferrer" 
+               class="cta-btn-hover inline-block w-full bg-brand-yellow text-brand-darkgreen font-extrabold text-lg md:text-xl py-4 px-8 rounded-full shadow-2xl uppercase tracking-wider">
+                QUIERO CONOCER PANZA CERO
+            </a>
+            <p class="text-xs text-blue-200 mt-2">© 2026 Panza Cero. Todos los derechos reservados.</p>
+        </div>
+    </section>
+
+    <!-- Lógica JS para el Acordeón Interactivo -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('i');
+
+                    // Alternar activo actual
+                    const isOpen = content.classList.contains('active');
+
+                    // Cerrar todos los acordeones
+                    document.querySelectorAll('.accordion-content').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    document.querySelectorAll('.accordion-header i').forEach(i => {
+                        i.style.transform = 'rotate(0deg)';
+                    });
+
+                    // Si no estaba abierto, abrirlo
+                    if (!isOpen) {
+                        content.classList.add('active');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
